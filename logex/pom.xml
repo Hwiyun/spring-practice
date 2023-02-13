@@ -7,44 +7,30 @@
 	</parent>
 	<artifactId>logex</artifactId>
 	<packaging>war</packaging>
+	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.build.outputEncoding>UTF-8</project.build.outputEncoding>
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
 		<org.springframewok-version>5.3.25</org.springframewok-version>
-			<jcloverslf4j.version>1.7.36</jcloverslf4j.version>		
-    	<logback.version>1.2.11</logback.version>
+    	<jcloverslf4j.version>1.7.36</jcloverslf4j.version>		
+    	<logback.version>1.2.11</logback.version>		
 	</properties>
 
-
 	<dependencies>
-		<!-- spring context -->
-		<dependency>
-		    <groupId>org.springframework</groupId>
-		    <artifactId>spring-context</artifactId>
-		    <version>${org.springframewok-version}</version>
-		</dependency>
-
-		<!-- spring web -->
-		<dependency>
-		    <groupId>org.springframework</groupId>
-		    <artifactId>spring-web</artifactId>
-		    <version>${org.springframewok-version}</version>
-		</dependency>
-
 		<!-- spring mvc -->
 		<dependency>
 		    <groupId>org.springframework</groupId>
 		    <artifactId>spring-webmvc</artifactId>
 		    <version>${org.springframewok-version}</version>
-		    <!-- JCL 제외 -->
+			<!-- JCL 제외 -->
 			<exclusions>
 			   <exclusion>
 				  <groupId>org.springframework</groupId>
 				  <artifactId>spring-jcl</artifactId>
 			   </exclusion>
-			</exclusions>
+			</exclusions>		    
 		</dependency>
 		
 		<!-- Logback --> 
@@ -58,7 +44,7 @@
 			<artifactId>logback-classic</artifactId>
 			<version>${logback.version}</version>
 		</dependency>
-		
+				
 		<!-- servlet -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -75,7 +61,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>logexs</finalName>
+		<finalName>logex</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -83,5 +69,5 @@
 				<version>3.3.2</version>
 			</plugin>
 		</plugins>
-	</build>
+	</build>	
 </project>
